@@ -6,6 +6,8 @@ TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
+First, install [mozjpeg](https://github.com/mozilla/mozjpeg).
+
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -22,7 +24,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+o, s = Mmozjpeg::Cjpeg.optimize(infile: "./spec/test.jpg", quality: "70,90")
+```
 
 ## Development
 
