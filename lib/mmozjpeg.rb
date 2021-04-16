@@ -29,10 +29,10 @@ module Mmozjpeg
         end
         parsed_infile = Pathname(infile).cleanpath.to_s unless infile.nil?
 
-        if !outfile.nil? or !grayscale.nil? or !rgb.nil? or !optimize.nil? or !progressive.nil? or
-          !targa.nil? or !arithmetic.nil? or !dct.nil? or !icc.nil? or !restart.nil? or !maxmemory.nil? or
-          !memdst.nil? or !report.nil? or !verbose.nil? or !debug.nil? or !version.nil? or
-          !baseline.nil? or !qtables.nil? or !qslots.nil? or !sample.nil? or !scans.nil?
+        if !outfile.nil? || !grayscale.nil? || !rgb.nil? || !optimize.nil? || !progressive.nil? ||
+            !targa.nil? || !arithmetic.nil? || !dct.nil? || !icc.nil? || !restart.nil? || !maxmemory.nil? ||
+            !memdst.nil? || !report.nil? || !verbose.nil? || !debug.nil? || !version.nil? ||
+            !baseline.nil? || !qtables.nil? || !qslots.nil? || !sample.nil? || !scans.nil?
           raise Mmozjpeg::Error, "Oop, This option is'nt yet supported."
         end
         args = [cjpeg, parsed_quality, parsed_infile].select { |v| !v.nil? }.flatten!
